@@ -1,0 +1,16 @@
+#+author: Indigo Paige
+#+title:  blog
+
+* A                                                                    :blog:
+:PROPERTIES:
+:AUTHOR:   Indigo Paige
+:DATE:     [2026-08-30 Sun]
+:PATH:     a
+:END:
+
+* B                                                                    :blog:
+:PROPERTIES:
+:AUTHOR:   Indigo Paige
+:DATE:     [2026-08-30 Sun]
+:PATH:     b
+:END:
