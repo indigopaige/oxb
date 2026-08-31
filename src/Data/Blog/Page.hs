@@ -58,10 +58,16 @@ instance ToHtml Meta where
 
 instance ToHtml Page where
   toHtmlRaw = toHtml
-  toHtml p  = main_ [class_ "page"] $ do
-    h1_ [class_ "title"] $ toHtml (p^.pageName)
-    toHtml $ p^.pageMeta
-    toHtml $ p^.pageBody
+  toHtml p  = html_ $ do
+    head_ $ do
+      title_ pageName'
+    body_ $ do
+      main_ [class_ "page"] $ do
+        h1_ [class_ "title"] pageName'
+        toHtml $ p^.pageMeta
+        toHtml $ p^.pageBody
+          where
+            pageName' = toHtml (p^.pageName)
 
 pages :: OrgDocument -> [Page]
 pages doc = catMaybes $ map toPage f
