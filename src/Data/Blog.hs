@@ -70,12 +70,13 @@ instance ToHtml OrgObject where
 
 instance ToHtml [OrgSection] where
   toHtmlRaw = toHtml
-  toHtml    = foldl (\x y -> x <> toHtml y <> br_ []) mempty
+  toHtml    = foldl (\x y -> x <> toHtml y) mempty
 
 instance ToHtml OrgSection where
   toHtmlRaw = toHtml
   toHtml s  = div_ [class_ "section"] $ do
     title
+    toHtml (sectionChildren s)
     toHtml (sectionSubsections s)
     where
       title = case (sectionLevel s) of

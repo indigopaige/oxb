@@ -68,7 +68,7 @@ instance ToHtml Page where
     body_ $ do
       header_ $ h1_ pageName'
 
-      main_ [class_ "box"] $ do
+      main_ [class_ "box page"] $ do
         toHtml $ p^.pageMeta
         br_ []
         toHtml $ p^.pageBody

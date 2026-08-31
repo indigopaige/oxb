@@ -1,5 +1,5 @@
 @font-face {
-    src: url("/fonts/ibm_conv.woff") format("woff");
+    src: url("https://indigopaige.blog/fonts/ibm_conv.woff") format("woff");
     font-family: ibm_conv;
     font-display: swap;
     font-style: normal;
@@ -7,14 +7,14 @@
 }
 
 @font-face {
-    src: url("/fonts/mbyte.woff") format("woff");
+    src: url("https://indigopaige.blog/fonts/mbyte.woff") format("woff");
     font-family: mbyte_ega;
     font-display: swap;
     font-weight: 200;
 }
 
 @font-face {
-    src: url("/fonts/tandy.woff") format("woff");
+    src: url("https://indigopaige.blog/fonts/tandy.woff") format("woff");
     font-display: swap;
     font-family: tandy;
     font-weight: 920;
@@ -34,7 +34,7 @@
 
 li::marker {
     color: #FDFD96;
-    content: "★ ";
+    content: "  ";
 }
 
 li {
@@ -118,23 +118,47 @@ header h1 {
     text-align: center;
     font-display: swap;
     color: var(--girly-red);
+    padding: 10px;
 }
 
 h2 {
     text-shadow: var(--glowyish);
     font-family: ibm_conv;
     font-display: swap;
-    color: var(--girly-red);
+    color: #6E233D;
 }
 
 h3 {
     text-shadow: var(--glowyish);
     font-family: ibm_conv;
     font-display: swap;
-    color: var(--girly-red);
-    margin-bottom: 0;
-
+    color: #702C44;
 }
+
+h4 {
+    text-shadow: var(--glowyish);
+    font-family: ibm_conv;
+    font-display: swap;
+    color: #994865; 
+    font-size: 12px;
+}
+
+h5 {
+    color: #B36F88;
+    text-shadow: var(--glowyish);
+    font-family: ibm_conv;
+    font-display: swap;
+    font-size: 11px;
+}
+
+h6 {
+    color: #874559;
+    text-shadow: var(--glowyish);
+    font-family: ibm_conv;
+    font-display: swap;
+    font-size: 10px;
+}
+
 
 body { 
     text-shadow: var(--body-text-shadow); 
@@ -154,8 +178,8 @@ body {
     justify-self: center;
     font-family: mbyte_ega;
     border-radius: 4px;
+    width: 60%;
     padding: 20px 15px; 
-    width: 80%;
     font-size: 15.459px;
     font-display: swap;
     display: flex;
@@ -177,6 +201,14 @@ body {
     font-size: 18px;
 }
 
+.meta {
+    height: 30px
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
 /*
 webkit scroll stuff?
 */
