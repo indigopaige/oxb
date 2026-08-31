@@ -26,7 +26,6 @@ dependencies:
         - containers
         - org-parser
         - directory
-        - effectful
         - lucid
         - text
         - lens
