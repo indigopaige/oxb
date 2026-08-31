@@ -38,7 +38,7 @@ instance ToHtml Home where
   toHtml h  = html_ $ do
     head_ $ do
       meta_ [name_ "viewport", content_ "width=device-width, initial-scale=1" ]
-      link_ [rel_ "stylesheet", href_ "styles.css"]
+      link_ [rel_ "stylesheet", href_ "https://indigopaige.blog/styles.css"]
       title_ $ title
       meta_ [charset_ "utf-8"]
     body_ $ do
