@@ -22,7 +22,7 @@ main = do
   str <- readFile name
   let doc = parseOrgDoc defaultOrgOptions name (pack str)
   case toHome doc of
-    Nothing -> print "no home"
+    Nothing -> print "failed to make home page"
     Just x  -> writeHome x
   where
     name = "blog.org"

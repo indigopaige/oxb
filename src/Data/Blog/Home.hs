@@ -53,12 +53,16 @@ writeHome home = do
   createDirectoryIfMissing False "blog"
   homePage >> other
   where
-    path x   = "./blog/" <> x <> ".html"
-    homePage = TIO.writeFile (path "home") $  renderText (toHtml home)
+    homePage = do
+      TIO.writeFile "./blog/index.html" $  renderText (toHtml home)
 
     other    = mapM_ f (home^.homePages)
-    f a      = TIO.writeFile filePath' text
+    f a      = do
+      createDirectoryIfMissing False dirPath
+      TIO.writeFile filePath' text
       where
-        mp        = a^.pageMeta.metaPath
-        filePath' = path (unpack mp)
+        filePath' = dirPath <> "/" <> "index.html"
+        dirPath   = "./blog/" <> mp
+
+        mp        = unpack $ a^.pageMeta.metaPath
         text      = renderText (toHtml a)
