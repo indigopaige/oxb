@@ -89,3 +89,12 @@ instance ToHtml OrgSection where
         where
           c = [class_ "level"]
           t = toHtml (sectionTitle s)
+
+instance ToHtml [OrgElement] where
+  toHtmlRaw = toHtml
+  toHtml    = foldl (\x y -> x <> toHtml y) mempty
+
+instance ToHtml OrgElement where
+  toHtmlRaw                            = toHtml
+  toHtml (OrgElement _ (Paragraph p))  = toHtml p
+  toHtml _                             = pure ()
