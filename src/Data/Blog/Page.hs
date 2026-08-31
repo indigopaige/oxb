@@ -70,7 +70,6 @@ instance ToHtml Page where
 
       main_ [class_ "box page"] $ do
         toHtml $ p^.pageMeta
-        br_ []
         toHtml $ p^.pageBody
           where
             pageName' = toHtml (p^.pageName)
