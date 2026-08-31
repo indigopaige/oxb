@@ -4,6 +4,7 @@ default-extensions:
         - GeneralizedNewtypeDeriving
         - MultiParamTypeClasses
         - ExtendedDefaultRules
+        - AllowAmbiguousTypes
         - ImportQualifiedPost
         - OverloadedStrings
         - FlexibleInstances

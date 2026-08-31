@@ -19,6 +19,7 @@ library
       GeneralizedNewtypeDeriving
       MultiParamTypeClasses
       ExtendedDefaultRules
+      AllowAmbiguousTypes
       ImportQualifiedPost
       OverloadedStrings
       FlexibleInstances
@@ -39,7 +40,6 @@ library
       base >=4.15 && <5
     , containers
     , directory
-    , effectful
     , lens
     , lucid
     , org-parser
@@ -52,6 +52,7 @@ executable oxb
       GeneralizedNewtypeDeriving
       MultiParamTypeClasses
       ExtendedDefaultRules
+      AllowAmbiguousTypes
       ImportQualifiedPost
       OverloadedStrings
       FlexibleInstances
@@ -72,7 +73,6 @@ executable oxb
       base >=4.15 && <5
     , containers
     , directory
-    , effectful
     , lens
     , lucid
     , org-parser

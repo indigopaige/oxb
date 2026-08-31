@@ -19,7 +19,8 @@
           root = ./.;
         };
       in {
-        packages.default = pkgs.stdenv.mkDerivation {
+        packages.default = oxb;
+        packages.export = pkgs.stdenv.mkDerivation {
           name = "oxb";
           src  = ./.;
 

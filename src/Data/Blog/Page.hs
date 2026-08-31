@@ -54,12 +54,16 @@ instance ToHtml Meta where
   toHtmlRaw           = toHtml
   toHtml (Meta a d _) = div_ [class_ "meta"] $ do
     span_ (toHtml a)
+    br_ []
     span_ (toHtml d)
 
 instance ToHtml Page where
   toHtmlRaw = toHtml
   toHtml p  = html_ $ do
     head_ $ do
+      meta_ [name_ "viewport", content_ "width=device-width, initial-scale=1" ]
+      link_ [rel_ "stylesheet", href_ "styles.css"]
+      meta_ [charset_ "utf-8"]
       title_ pageName'
     body_ $ do
       main_ [class_ "page"] $ do

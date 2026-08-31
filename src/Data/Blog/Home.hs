@@ -35,18 +35,27 @@ toHome doc = do
 
 instance ToHtml Home where
   toHtmlRaw = toHtml
-  toHtml h  = main_ [class_ "home"] $ do
-    h1_ $ toHtml (h^.homeTitle)
-    ul_ $ foldl f mempty (h^.homePages)
-      where
-        f last next = do
-          last
-          br_ []
-          li_ [class_ "post"] $ do
-            h2_ [class_ "title"] $ do
-              a_  [class_ "link", href_ uri ] $ toHtml (next^.pageName)
-            where
-              uri = "/" <> (next^.pageMeta.metaPath)
+  toHtml h  = html_ $ do
+    head_ $ do
+      meta_ [name_ "viewport", content_ "width=device-width, initial-scale=1" ]
+      link_ [rel_ "stylesheet", href_ "styles.css"]
+      title_ $ title
+      meta_ [charset_ "utf-8"]
+    body_ $ do
+      header_ $ h1_ title
+
+      main_ [class_ "box"] $ do
+        ul_ [class_ "links"] $ foldl f mempty (h^.homePages)
+    where
+      title          = toHtml (h^.homeTitle)
+
+      f last current = do
+        last
+        li_ $ do
+          a_ [class_ "link", href_ uri] name
+        where
+          name = toHtml (current^.pageName)
+          uri  = "/" <> current^.pageMeta.metaPath 
 
 writeHome :: Home -> IO ()
 writeHome home = do
@@ -66,3 +75,16 @@ writeHome home = do
 
         mp        = unpack $ a^.pageMeta.metaPath
         text      = renderText (toHtml a)
+
+
+
+
+
+
+
+
+
+
+
+
+
