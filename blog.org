@@ -8,19 +8,25 @@
 :PATH:     a
 :END:
 
-This is a test thing and this is also a test thing
+This is a test of my new blog software
 
 ** This
-Is another test
+Is another test of my blog software
 
-** AWhwa
-Yes
+** Another
+test of my software
 
 *** Random crap
 test random
 
 **** Random bullshit
-shit that is bull
+bullshit
+
+***** Even more
+random
+
+****** Yes
+this is all
 * B                                                                    :blog:
 :PROPERTIES:
 :AUTHOR:   Indigo Paige
