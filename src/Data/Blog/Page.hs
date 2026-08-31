@@ -53,8 +53,10 @@ toPage s = do
 instance ToHtml Meta where
   toHtmlRaw           = toHtml
   toHtml (Meta a d _) = div_ [class_ "meta"] $ do
+    span_ [class_ "pastel"] "★"
     span_ (toHtml a)
     br_ []
+    span_ [class_ "pastel"] "★"
     span_ (toHtml d)
 
 instance ToHtml Page where
@@ -66,9 +68,11 @@ instance ToHtml Page where
       meta_ [charset_ "utf-8"]
       title_ pageName'
     body_ $ do
-      main_ [class_ "page"] $ do
-        h1_ [class_ "title"] pageName'
+      header_ $ h1_ pageName'
+
+      main_ [class_ "box"] $ do
         toHtml $ p^.pageMeta
+        br_ []
         toHtml $ p^.pageBody
           where
             pageName' = toHtml (p^.pageName)

@@ -28,6 +28,10 @@
     --main-dark: black;
 }
 
+.pastel {
+    color: #FDFD96;
+}
+
 li::marker {
     color: #FDFD96;
     content: "★ ";

@@ -1,5 +1,5 @@
 #+author: Indigo Paige
-#+title:  indigo.blog
+#+title:  indigopaige.blog
 
 * A                                                                    :blog:
 :PROPERTIES:
