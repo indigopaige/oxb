@@ -53,10 +53,8 @@ toPage s = do
 instance ToHtml Meta where
   toHtmlRaw           = toHtml
   toHtml (Meta a d _) = div_ [class_ "meta"] $ do
-    span_ [class_ "pastel"] "★"
     span_ (toHtml a)
     br_ []
-    span_ [class_ "pastel"] "★"
     span_ (toHtml d)
 
 instance ToHtml Page where
