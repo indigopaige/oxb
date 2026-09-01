@@ -96,5 +96,5 @@ instance ToHtml [OrgElement] where
 
 instance ToHtml OrgElement where
   toHtmlRaw                            = toHtml
-  toHtml (OrgElement _ (Paragraph p))  = toHtml p
+  toHtml (OrgElement _ (Paragraph p))  = p_ (toHtml p)
   toHtml _                             = pure ()

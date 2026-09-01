@@ -72,6 +72,7 @@ instance ToHtml Page where
 
       main_ [class_ "box page"] $ do
         toHtml $ p^.pageMeta
+        br_ []
         toHtml $ p^.pageBody
         toHtml $ p^.pageSect
           where
