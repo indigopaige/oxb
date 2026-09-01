@@ -1,35 +1,31 @@
 #+author: Indigo Paige
 #+title:  indigopaige.blog
 
-* A                                                                    :blog:
+* Housing                                                              :blog:
 :PROPERTIES:
 :AUTHOR:   Indigo Paige
-:DATE:     [2026-08-30 Sun]
-:PATH:     a
+:DATE:     [2026-08-31 Mon]
+:PATH:     housing
 :END:
 
-This is a test of my new blog software
+Throughout my recent trials in life I've come to see life as ever-changing and
+unstable.
 
-** This
-Is another test of my blog software
+Constantly moving from place to place, never knowing how long things will last.
+It's certainly scary. All while you still have to afford food, clothing, things
+most people who didn't have a rough start in life are used to as "basics".
+For me basics is food and water. I think when you live on the edge for so long,
+the definition changes. It's what you need to live, at your worst.
 
-** Another
-test of my software
+When I tell people I finally got a place to stay, it seems like it should be a
+moment of accomplishment, but to my internal wiring has changed and all I can
+think about is, "how long will this last..?". Does that mean I'm not grateful?
+No. I'm very grateful. But the truth is that living will never be the same.
 
-*** Random crap
-test random
+Part of me wonders, how many people are just one firing away from losing every
+thing they worked for in their whole life. People living paycheck to paycheck,
+they can't afford to pay for rent while they're looking for work. It's crazy,
+just how easy it is to lose your footing, and drop everything.
 
-**** Random bullshit
-bullshit
-
-***** Even more
-random
-
-****** Yes
-this is all
-* B                                                                    :blog:
-:PROPERTIES:
-:AUTHOR:   Indigo Paige
-:DATE:     [2026-08-30 Sun]
-:PATH:     b
-:END:
+Closing thoughts for todays post is, housing is a scam and live with your folks
+for as long as you can.
