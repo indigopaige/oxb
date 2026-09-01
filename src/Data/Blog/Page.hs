@@ -17,7 +17,8 @@ import Lucid
 
 data Page = Page
   { _pageName :: [OrgObject]
-  , _pageBody :: [OrgSection]
+  , _pageSect :: [OrgSection]
+  , _pageBody :: [OrgElement]
   , _pageMeta :: Meta
   }
   deriving Show
@@ -26,6 +27,7 @@ data Meta = Meta
   { _metaAuthor :: Text
   , _metaDate   :: TimestampData
   , _metaPath   :: Text
+
   }
   deriving Show
 
@@ -48,7 +50,7 @@ collectMeta props = do
 toPage :: OrgSection -> Maybe Page
 toPage s = do
   meta <- collectMeta (sectionProperties s)
-  pure $ Page (sectionTitle s) (sectionSubsections s) meta
+  pure $ Page (sectionTitle s) (sectionSubsections s) (sectionChildren s) meta
 
 instance ToHtml Meta where
   toHtmlRaw           = toHtml
@@ -71,6 +73,7 @@ instance ToHtml Page where
       main_ [class_ "box page"] $ do
         toHtml $ p^.pageMeta
         toHtml $ p^.pageBody
+        toHtml $ p^.pageSect
           where
             pageName' = toHtml (p^.pageName)
 
