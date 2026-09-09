@@ -75,16 +75,3 @@ writeHome home = do
 
         mp        = unpack $ a^.pageMeta.metaPath
         text      = renderText (toHtml a)
-
-
-
-
-
-
-
-
-
-
-
-
-
