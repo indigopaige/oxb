@@ -22,8 +22,8 @@
 
 :root {
     --glowyish: 1px 1px 0 #2e2e2e;
-    --titleglow: 3.3px 2px 0 #2e2e2e;
-    --girly-red: #612135;
+    --titleglow: 3.3px 2px 0 #282828;
+    --girly-red: #cba2ff;
     --main-dark: black;
 }
 
@@ -39,6 +39,7 @@ html {
 }
 
 body {
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232f2f6eff'/><path d='M0 0h10v10H0z'  stroke-width='1' stroke='none' fill='%23000000ff'/><path d='M10 10h10v10H10z'  stroke-width='1' stroke='none' fill='%23000000ff'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
     margin: 0;
     background-color: var(--main-dark);
     text-shadow: var(--body-text-shadow);
@@ -55,15 +56,15 @@ body {
 }
 
 .pastel {
-    color: #FDFD96;
+    color: #fdfd96;
 }
 
 .specil {
-    color: #FAA0A0;
+    color: #faa0a0;
 }
 
 li::marker {
-    color: #FDFD96;
+    color: #fdfd96;
     content: "★ ";
 }
 
@@ -85,6 +86,7 @@ button {
 
 a {
     text-decoration: none;
+    font-size: 20px;
 }
 
 button {
@@ -124,12 +126,12 @@ header h1 {
 
 h2 {
     text-shadow: var(--glowyish);
-    color: #6E233D;
+    color: #6e233d;
 }
 
 h3 {
     text-shadow: var(--glowyish);
-    color: #702C44;
+    color: #702c44;
 }
 
 h4 {
@@ -139,7 +141,7 @@ h4 {
 }
 
 h5 {
-    color: #B36F88;
+    color: #b36f88;
     text-shadow: var(--glowyish);
     font-size: 11px;
 }
@@ -153,7 +155,7 @@ h6 {
 .box {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #000000;
-    border: 2px solid #0a0d12;
+    border: 2px solid var(--girly-red);
     border-radius: 4px;
     width: min(60%, 900px);
     margin: 25px auto;
@@ -163,7 +165,6 @@ h6 {
     font-display: swap;
     display: flex;
     color: #bdbdbd;
-
 }
 
 .page {
