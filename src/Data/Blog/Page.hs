@@ -79,7 +79,11 @@ instance ToHtml Page where
             pageName' = toHtml (p^.pageName)
 
 pages :: OrgDocument -> [Page]
-pages doc = catMaybes $ map toPage f
+pages doc = catMaybes $ map toPage (getSections doc)
+
+getSections :: OrgDocument -> [OrgSection]
+getSections = f . documentSections
   where
-    f   = filter g (documentSections doc)
-    g x = "blog" `elem` sectionTags x
+    f (x:xs) | "blog" `elem` sectionTags x = x:(f xs)
+    f (x:xs)                               = f (sectionSubsections x ++ xs)
+    f []                                   = []
