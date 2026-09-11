@@ -95,6 +95,10 @@ instance ToHtml [OrgElement] where
   toHtml    = foldl (\x y -> x <> toHtml y) mempty
 
 instance ToHtml OrgElement where
-  toHtmlRaw                            = toHtml
-  toHtml (OrgElement _ (Paragraph p))  = p_ (toHtml p)
-  toHtml _                             = pure ()
+  toHtmlRaw                             = toHtml
+  toHtml (OrgElement _ (PlainList _ l)) = ul_ (mapM_ f l)
+    where
+      f (ListItem _ _ _ _ e) = li_ (toHtml e)
+
+  toHtml (OrgElement _ (Paragraph p))   = p_ (toHtml p)
+  toHtml _                              = pure ()
