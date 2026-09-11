@@ -15,8 +15,7 @@ amateur who prides themselves on creativity, and personality.
 Oxb (org export blog) is a small personalized (not meant for public use)
 software I created to turn .org documents into a full blog website.
 That is what this website is hosted on. See more about oxb [[https:indigopaige.blog/oxb][here]].
-
-* Oxb
+* Oxb                                                                  :blog:
 :PROPERTIES:
 :AUTHOR:   Indigo Paige
 :DATE:     [2026-09-11 Fri]
