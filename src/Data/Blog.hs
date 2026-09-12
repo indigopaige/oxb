@@ -79,7 +79,8 @@ instance ToHtml OrgSection where
     toHtml (sectionChildren s)
     toHtml (sectionSubsections s)
     where
-      title = case (sectionLevel s) of
+      level = sectionLevel s
+      title = case level of
         -- reserve h1 for titles
         1 -> h2_ c t
         2 -> h3_ c t
