@@ -120,35 +120,41 @@ header h1 {
     text-shadow: var(--titleglow);
     text-align: center;
     padding: 10px;
+    color: white;
 }
 
 h2 {
     text-shadow: var(--glowyish);
+    color: white;
 }
 
 h3 {
     text-shadow: var(--glowyish);
+    color: white;
 }
 
 h4 {
     text-shadow: var(--glowyish);
     font-size: 12px;
+    color: white;
 }
 
 h5 {
     text-shadow: var(--glowyish);
     font-size: 11px;
+    color: white;
 }
 
 h6 {
     text-shadow: var(--glowyish);
     font-size: 10px;
+    color: white;
 }
 
 .box {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #000000;
-    border: 2px solid var(--girly-red);
+    border: 2px solid gray;
     border-radius: 4px;
     width: min(60%, 900px);
     margin: 25px auto;
